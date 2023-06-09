@@ -1,4 +1,4 @@
-<!doctype html>
+Put your HTML text here<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -40,12 +40,12 @@
 	    </div>-->
 		
              <br><br>
-		  
+		  <!--
 	    <div class="row">
 	  	<div class="col-lg">
 	  	<img src="./images/workflow.png" class="img-fluid" style="width:900px;">
 	  	</div>
-	    </div>
+	    </div>-->
 
 	    <br><br>
 
@@ -60,10 +60,35 @@
 In the recent progress in embodied navigation and sim-to-robot transfer, modular policies have emerged as a de facto framework. However, there is more to compositionality beyond the decomposition of the learning load into separate exploration and exploitation phases. In this work, we investigate how the syntactical combination of these modules can be enhanced. Particularly, we devise Exploitation-Guided Exploration (or XGX) where we combine these modules in a novel and intuitive manner. We allow the exploitation module to take over in the deterministic final steps of navigation when the goal is visible. Crucially, in XGX it teacher-forces the exploration module and continues driving an overridden policy optimization. With this guidance and a simple and effective choice of exploitation module, XGX improves the state-of-the-art on the challenging object navigation task from 70% to 76%. Along with better accuracy, through targeted analysis, we show that it is more efficient at goal-conditioned exploration. Finally, we show sim-to-real transfer to robot hardware where trends hold in favor of XGX.
 	  	</p>
 	  	</div>
-            </div>
+        </div>
 
 	    <br><br>
+	    <div class="row">
+	  	<div class="col-sm">
+	  		<h2> Robot Morphology </h2>
+	  	</div>
+	    </div>
+	    <div class="row">
+	  	<div class="col-lg">
+	  	<img src="./images/morphology.png" class="img-fluid" style="width:900px;">
+	  	</div>
+	    </div>
+	    <br>
+	    <div class="row">
+	  	<div style="font-size:16px"><p align="justify">
+    <b>Hardware specification:</b> Key features in the wheeled robot:<br>
+    (1) four independent trains<br>
+    (2) an upward facing camera<br>
+    (3) zero radius turns help us in the policy transfer. <br><br>
+    
+    We utilize an economical, widely-used RGB camera (Intel® RealSense™ D435i), a 2D LIDAR (Hokuyo® UST-10LX), that in conjunction with RTAB-MAP helps localize the agent in the real-world (analogous to the ‘GPS+Compass sensor’ in AIHabitat). At the end of every episode, the map created by RTAB MAP is deleted. Goal categories are {chair, couch, tv} (overlapping with HM3D objects in AIHabitat). Following success in robot navigation and locomotion research, we realize the low-level actuation using Model Predictive Control.
 
+	  	</p>
+	  	</div>
+        </div>
+        
+	    <br><br>
+	    
 	    <div class="row">
 	  	<div class="col-lg">
 	  		<h2>Qualitative Results of Various Experiments</h2>
