@@ -70,7 +70,7 @@ In the recent progress in embodied navigation and sim-to-robot transfer, modular
 	    </div>
 	    <div class="row">
 	  	<div class="col-lg">
-	  	<img src="./images/robot.png" class="img-fluid" style="width:600px;">
+	  	<img src="./images/robot.png" class="img-fluid" style="width:800px;">
 	  	</div>
 	    </div>
 	    <br>
@@ -91,11 +91,16 @@ In the recent progress in embodied navigation and sim-to-robot transfer, modular
 	    
 	    <div class="row">
 	  	<div class="col-lg">
-	  		<h2>Qualitative Results of Various Experiments</h2>
+	  		<h2>Qualitative Rollouts</h2>
 			<center>
-			<video id="vid" controls="controls" onended="this.currentTime = 0; this.play();" src="video/demo.mp4" class="img-fluid" width="900px"> 
-			</video></center>
-                </div>
+			<h3>Transfer with Simulation Parameters Fails!</h3>
+			When transferring polcies from sim-to-real, we found that using the simuation parameters that don't match the robot's camera and phyiscal parameters causes the robot to fail. In the following rollout, the agent with the simulator's default camera and physical parameters fails to stop at a chair!
+			<img src="./images/roll1.png" class="img-fluid" style="width:1200px;"><br>
+			<h3>Retraining with Robot Parameters Improves Navigation Performance</h3>
+            After retraining the policy in simulation with the parameters corresponding to the real world robot, the agent is able to complete object-goal navigation tasks. In the following rollout the agent reaches a TV that was 12 meters away from the starting location.
+			<img src="./images/roll2.png" class="img-fluid" style="width:1200px;">
+			</center>
+            </div>
 	    </div>        		
 	<br><br>
 
