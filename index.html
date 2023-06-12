@@ -79,8 +79,8 @@ In the recent progress in embodied navigation and sim-to-robot transfer, modular
 	  	<div style="font-size:16px"><p align="justify">
     <b>Hardware specification:</b> Key features in the wheeled robot:<br>
     (1) Four independent trains<br>
-    (2) LIDAR for autonomy and mappin<br>
-    (3) Zero radius turns help us in the policy transfer. <br><br>
+    (2) LIDAR for autonomy and mapping<br>
+    (3) Zero radius turns help us in the policy transfer <br><br>
     
     We utilize an economical, widely-used RGB camera (Intel® RealSense™ D435i), a 2D LIDAR (Hokuyo® UST-10LX), that in conjunction with RTAB-MAP helps localize the agent in the real-world (analogous to the ‘GPS+Compass sensor’ in AIHabitat). At the end of every episode, the map created by RTAB-MAP is deleted. Following success in robot navigation and locomotion research, we realize the low-level actuation using Model Predictive Control.
     <div class="row">
@@ -109,10 +109,14 @@ In the recent progress in embodied navigation and sim-to-robot transfer, modular
 			<center>
 			<h3>Transfer with Simulation Parameters Fails!</h3>
 			When transferring polcies from sim-to-real, we found that using the simuation parameters that don't match the robot's camera and phyiscal parameters causes the robot to fail. In the following rollout, the agent with the simulator's default camera and physical parameters fails to stop at a chair!
-			<img src="https://corl2023paper107.github.io/images/roll1.png" class="img-fluid" style="width:1200px;"><br><br><br>
+			<img src="https://corl2023paper107.github.io/images/roll1.png" class="img-fluid" style="width:1200px;">
+			<video id="vid" controls="controls" onended="this.currentTime = 0; this.play();" src="https://corl2023paper107.github.io/videos/pirl_clean.mp4" class="img-fluid" width="700px"> 
+			</video>
+			<br><br><br>
 			<h3>Retraining with Robot Parameters Improves Navigation Performance</h3>
             After retraining the policy in simulation with the parameters corresponding to the real world robot, the agent is able to complete object-goal navigation tasks. In the following rollout the agent reaches a TV that was 12 meters away from the starting location.
 			<img src="https://corl2023paper107.github.io/images/roll2.png" class="img-fluid" style="width:1200px;">
+			<video id="vid" controls="controls" onended="this.currentTime = 0; this.play();" src="https://corl2023paper107.github.io/videos/tv_clean.mp4" class="img-fluid" width="700px"> </video>
 			</center>
             </div>
 	    </div>        		
