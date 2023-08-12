@@ -22,7 +22,8 @@
         <div class="row">
             <div class="col-sm">
                 <h2 style="margin-top: 0px;">False Positive Goal [47%]</h2>
-                The semantic segmentation model incorrectly labels the counter as "bed" and stop at it. This can be seen in the top-down semantic map where a large blue blob represents the incorrectly-labeled goal.
+                <p>Semantic prediction failures are to be expected; however, these false positives are put into a persistent semantic map. XGX is prone to the same semantic failures but are partly corrected via recurrence, explicit switching mechanism, and no persistent explicit semantic map.</p>
+                In the video, the semantic segmentation model incorrectly labels the counter as "bed" and stop at it. This can be seen in the top-down semantic map where a large blue blob represents the incorrectly-labeled goal.
                 <div class="video-container">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/sem_map/false_positive_small.gif"  allowfullscreen style="width: 80%; height: 80%;"></iframe>
@@ -31,7 +32,8 @@
                 <hr>
                 
                 <h2>Planning Failure [23%]</h2>
-                The agent gets stuck on scene geometry that the planner does not see in its map.
+                <p>SemExp relies on planning in both exploration and exploitation (via waypoints). During exploration, SemExp’s **waypoints are far away** and planning often fails (obstacles in the geometry of the env. get overlooked). XGX employs a parametric exploration, leaving geometric visuo-motor servoing only for exploitation with **short-horizon waypoints**. XGX does not suffer this failure mode.</p>
+                In this video, the agent gets stuck on scene geometry that the planner does not see in its map.
                 <div class="video-container">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/sem_map/planner_small.gif" allowfullscreen style="width: 80%; height: 80%;"></iframe>
@@ -40,14 +42,17 @@
                 <hr>
                 
                 <h2 style="margin-top: 0px;">Stops Too Early [9%] </h2>
-                The agent explores the environment, and at some point calls a 'STOP' action too early.
+                <p>In this failure case, the planner causes the agent to call ‘STOP’ too early. A similar failure case in XGX is 2%. </p>
+                In the video, the agent explores the environment, and at some point calls a 'STOP' action too early.
                 <div class="video-container">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/sem_map/stop_small.gif" allowfullscreen style="width: 80%; height: 80%;"></iframe>
                 </div>
                 </div>
                 <hr>
-                
+                    <div id="intro" style="padding: 40px; text-align: center;">
+        <h1><a style="color: #191919;">Other Failure Modes</a></h1>
+    </div>
                 <h2 style="margin-top: 0px;">Exploration Failure [9%] </h2>
                 The agent explores the environment, but not fully and does not find the goal.
                 <div class="video-container">
