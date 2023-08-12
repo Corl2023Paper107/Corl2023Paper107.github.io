@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Real World Maps</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+    <div id="intro" style="padding: 40px; text-align: center;">
+        <h1><a style="color: #191919;">Our Failure Cases</a></h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h2 style="margin-top: 0px;">Missing Annotations</h2>
+                <b>(Object Goal = TV)</b> The agent calls the stop action right next to goal, but due to missing annotations, the agent is marked as "failed".
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/our_failures/annotations.mp4" allowfullscreen></iframe>
+                </div>
+                <hr>
+                
+                <h2 style="margin-top: 0px;">Exploration in Loops</h2>
+                <b>(Object Goal = TV)</b> The agent repeatively explores the same area that it has already seen before.
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/our_failures/loop.mp4" allowfullscreen></iframe>
+                </div>
+                <hr>
+                
+                <h2 style="margin-top: 0px;">Missed Staircases</h2>
+                <b>(Object Goal = TV)</b> The agent needs to go to the downstairs living room in order to find the goal. However, it fails to recognize the stairs in the hallway.
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/our_failures/stairs.mp4" allowfullscreen></iframe>
+                </div>
+                <hr>
+                
+                <h2 style="margin-top: 0px;">Recognition Errors</h2>
+                <b>(Object Goal = Toilet)</b> The agent repeatively visits the bathroom, but the semantic segmentation model fails to recognize the toilet.
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/our_failures/recognition.mp4" allowfullscreen></iframe>
+                </div>
+                <hr>
+                <h2 style="margin-top: 0px;">Cannot Avoid Broken Floor Geometry</h2>
+                <b>(Object Goal = Toilet)</b> The agent attempts to navigate to the goal, but the floor mesh to the toilet goal is incomplete, and the agent fails to get near the goal.
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/our_failures/broken_floor.mp4" allowfullscreen></iframe>
+                </div>
+                <hr>
+                
+                <h2 style="margin-top: 0px;">Stuck on Stairs</h2>
+                <b>(Object Goal = TV)</b> The agent repeatively tries to go up/down the stairs, but these are cosmetic and don't lead to new floors. 
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/our_failures/stuck_stairs.mp4" allowfullscreen></iframe>
+                </div>
+                <hr>
+                
+                <h2 style="margin-top: 0px;">Switching Error</h2>
+                <b>(Object Goal = TV)</b> The agent at multiple points gets fairly close to the goal, but not close enough. The exploration policy then diverges. (Around ~23 seconds in)
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/our_failures/switch.mp4" allowfullscreen></iframe>
+                </div>
+                <hr>
+                
+                <h2 style="margin-top: 0px;">Stop Right Away</h2>
+                <b>(Object Goal = TV)</b> The agent immediately stops due to sampling from a distribution of actions.
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/our_failures/stop.mp4" allowfullscreen></iframe>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
