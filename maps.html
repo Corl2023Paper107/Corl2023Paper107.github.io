@@ -2,84 +2,62 @@
 <html lang="en">
 <head>
     <style>
-.row3 {
-  display: flex;
-  justify-content: space-between;
+  .img-wrapper {
+    display: inline-block; /* Display the images inline */
+  }
+.img-fluid {
+  max-width: 50%; /* Ensure images don't exceed their container */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add some spacing between images */
 }
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    margin: 0;
-  }
-.row3 .col-lg img {
-  width: 31.33%; /* This will make each image take up one-third of the available width */
-}
-  .image-stack {
-    position: relative;
-    width: 300px; /* Added 'px' unit */
-    height: 300px;
-    margin-bottom: 20px; /* Add margin to create space between images and text */
-  }
-  .image-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .image:nth-child(1) {
-    z-index: 3;
-  }
-
-  .image:nth-child(2) {
-    z-index: 2;
-    top: 25px;
-    left: 25px;
-  }
-
-  .image:nth-child(3) {
-    z-index: 1;
-    top: 50px;
-    left: 50px;
-  }
 </style>
-  <!-- Required meta tags -->
-  <meta charset="utf-8"><!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <title>Real World Maps</title>
+
+    <meta charset="utf-8">
+      <title>Real World Visualizations</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
-  <div style="text-align:center;">
-    <div id="intro" style="width: 100%; padding:40px; text-align:center;">
-      <h1><a style="color:#191919">Real World <br> Visualizations</a></h1>
+    <div id="intro" style="padding: 40px; text-align: center;">
+        <h1><a style="color: #191919;">Real World Visualizations</a></h1>
     </div>
-    <div class="container">
- 
-      <div class="row">
-        <div class="col-sm">
-          <h2>Maps</h2>
-        </div>
-      </div> 
 
-     <div class="image-stack">
-        <img src="https://corl2023paper107.github.io/images/maps/map1a.png" class="img-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h2 style="margin-top: 0px;">Space 1</h2>
+                <div class="video-container">
+                  <div class="image-stack">
+                    <img src="https://corl2023paper107.github.io/images/maps/map1a.png" class="img-fluid">
+                    
+                </div>
+                </div>
+                <div class="img-wrapper">
+                  <img src="https://corl2023paper107.github.io/images/maps/f1_1.jpg" class="img-fluid">
+                  <img src="https://corl2023paper107.github.io/images/maps/f1_2.jpg" class="img-fluid">
+                </div>
+
+
+                <hr>
+                
+                <h2>Space 2</h2>
+                <div class="video-container">
+                  <div class="image-stack">
+                    <img src="https://corl2023paper107.github.io/images/maps/map2.png" class="img-fluid">
+                    
+                </div>
+                </div>
+                <div class="img-wrapper">
+                  <img src="https://corl2023paper107.github.io/images/maps/f2_1.jpg" class="img-fluid">
+                  <img src="https://corl2023paper107.github.io/images/maps/j2_2.jpg" class="img-fluid">
+                  
+                </div>
+
+                <hr>
+                
+
+            </div>
+        </div>
     </div>
-    <br>
-    <br>
-     <div class="image-stack">
-        <img src="https://corl2023paper107.github.io/images/maps/map2.png" class="img-fluid">
-    </div>
-    </div>
-  </div>
 </body>
 </html>
