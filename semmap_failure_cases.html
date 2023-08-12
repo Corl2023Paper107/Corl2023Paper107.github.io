@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+    <meta charset="utf-8">
+    <title>Semantic Map Failure Modes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+    <div id="intro" style="padding: 40px; text-align: center;">
+        <h1><a style="color: #191919;">Semantic Map Failure Modes</a></h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h2 style="margin-top: 0px;">False Positive Goal [47%]</h2>
+                The semantic segmentation model incorrectly labels the counter as "bed" and stop at it. This can be seen in the top-down semantic map where a large blue blob represents the incorrectly-labeled goal.
+                <div class="video-container">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/sem_map/false_positive_small.gif"  allowfullscreen style="width: 80%; height: 80%;"></iframe>
+                </div>
+                </div>
+                <hr>
+                
+                <h2>Planning Failure [23%]</h2>
+                The agent gets stuck on scene geometry that the planner does not see in its map.
+                <div class="video-container">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/sem_map/planner_small.gif" allowfullscreen style="width: 80%; height: 80%;"></iframe>
+                </div>
+                </div>
+                <hr>
+                
+                <h2 style="margin-top: 0px;">Stops Too Early [9%] </h2>
+                The agent explores the environment, and at some point calls a 'STOP' action too early.
+                <div class="video-container">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/sem_map/stop_small.gif" allowfullscreen style="width: 80%; height: 80%;"></iframe>
+                </div>
+                </div>
+                <hr>
+                
+                <h2 style="margin-top: 0px;">Exploration Failure [9%] </h2>
+                The agent explores the environment, but not fully and does not find the goal.
+                <div class="video-container">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/sem_map/explore_small.gif" allowfullscreen style="width: 80%; height: 80%;"></iframe>
+                </div>
+                </div>
+                <hr>
+                <h2 style="margin-top: 0px;">Failed to Find Goal [6%]</h2>
+                The agent passes by the potted plant multiple times but fails to recognize it.
+                <div class="video-container">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/sem_map/failed_to_find_goal_small.gif" allowfullscreen style="width: 80%; height: 80%;"></iframe>
+                </div>
+                </div>
+                <hr>
+                
+                <h2 style="margin-top: 0px;">Spilling of Semantic Segmentation Mask [6%]</h2>
+                The semantic mask spills onto the wall, causing the wall to be labeled as couch. The agent then navigates and stops at the wall.
+                <div class="video-container">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://corl2023paper107.github.io/videos/sem_map/spilling_small.gif" allowfullscreen style="width: 80%; height: 80%;"></iframe>
+                </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
