@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                <h2 style="margin-top: 0px;">Missing Annotations</h2>
+                <h2 style="margin-top: 0px;">Missing Annotations [45%]</h2>
                 <b>(Object Goal = TV)</b> The agent calls the stop action right next to goal, but due to missing annotations, the agent is marked as "failed".
                 <div class="video-container">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -30,7 +30,7 @@
                 </div>
                 <hr>
                 
-                <h2>Exploration in Loops</h2>
+                <h2>Exploration in Loops [18%]</h2>
                 <b>(Object Goal = TV)</b> The agent repeatively explores the same area that it has already seen before.
                 <div class="video-container">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -39,7 +39,7 @@
                 </div>
                 <hr>
                 
-                <h2 style="margin-top: 0px;">Missed Staircases</h2>
+                <h2 style="margin-top: 0px;">Missed Staircases [16%]</h2>
                 <b>(Object Goal = TV)</b> The agent needs to go to the downstairs living room in order to find the goal. However, it fails to recognize the stairs in the hallway.
                 <div class="video-container">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -48,7 +48,7 @@
                 </div>
                 <hr>
                 
-                <h2 style="margin-top: 0px;">Recognition Errors</h2>
+                <h2 style="margin-top: 0px;">Recognition Errors [9%]</h2>
                 <b>(Object Goal = Toilet)</b> The agent repeatively visits the bathroom, but the semantic segmentation model fails to recognize the toilet.
                 <div class="video-container">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -56,7 +56,7 @@
                 </div>
                 </div>
                 <hr>
-                <h2 style="margin-top: 0px;">Cannot Avoid Broken Floor Geometry</h2>
+                <h2 style="margin-top: 0px;">Cannot Avoid Broken Floor Geometry [4%]</h2>
                 <b>(Object Goal = Toilet)</b> The agent attempts to navigate to the goal, but the floor mesh to the toilet goal is incomplete, and the agent fails to get near the goal.
                 <div class="video-container">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -65,7 +65,7 @@
                 </div>
                 <hr>
                 
-                <h2 style="margin-top: 0px;">Stuck on Stairs</h2>
+                <h2 style="margin-top: 0px;">Stuck on Stairs [3%]</h2>
                 <b>(Object Goal = TV)</b> The agent repeatively tries to go up/down the stairs, but these are cosmetic and don't lead to new floors. 
                 <div class="video-container">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -74,7 +74,7 @@
                 </div>
                 <hr>
                 
-                <h2 style="margin-top: 0px;">Switching Error</h2>
+                <h2 style="margin-top: 0px;">Switching Error [3%]</h2>
                 <b>(Object Goal = TV)</b> The agent at multiple points gets fairly close to the goal, but not close enough. The exploration policy then diverges. (Around ~23 seconds in)
                 <div class="video-container">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -83,7 +83,7 @@
                 </div>
                 <hr>
                 
-                <h2 style="margin-top: 0px;">Stop Right Away</h2>
+                <h2 style="margin-top: 0px;">Stop Right Away [2%]</h2>
                 <b>(Object Goal = TV)</b> The agent immediately stops due to sampling from a distribution of actions.
                 <div class="video-container">
                 <div class="embed-responsive embed-responsive-16by9">
